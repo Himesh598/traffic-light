@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .light {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: grey;
+            margin: 20px auto;
+            border: 2px solid black;
+        }
+        .buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Traffic Light</h1>
+        <div id="light" class="light"></div>
+        <div class="buttons">
+            <button onclick="changeLight('red')" style="background-color: red; color: white;">Red</button>
+            <button onclick="changeLight('yellow')" style="background-color: yellow; color: black;">Yellow</button>
+            <button onclick="changeLight('green')" style="background-color: green; color: white;">Green</button>
+        </div>
+    </div>
+    <script>
+        function changeLight(color) {
+            document.getElementById('light').style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
